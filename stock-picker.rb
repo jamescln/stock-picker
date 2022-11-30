@@ -2,8 +2,7 @@ require 'pry-byebug'
 
 def stock_picker(prices)
     if prices.kind_of?(Array)
-    prices_array = prices
-    max_price = prices_array.max
+    max_price = prices.max
     possible_buy_dates = prices[0..prices.index(max_price)]
     min_price = possible_buy_dates.min
     max_price_index = prices.index(max_price)
